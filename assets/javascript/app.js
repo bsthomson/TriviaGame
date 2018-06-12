@@ -36,7 +36,7 @@ $("#timer").hide();
 
 function startScreen () {
     setTimeout(tenSeconds, 1000 * 10);
-    $(".buffer1").append("<div class='title'><h2>");
+    $("#question").append("<div class='title'><h2>");
     $(".click-ready, .ready, .buffer1").hide();
     $(".title").html(questions.question1.title);
     $(".title").append("<div class='choice1'>");
@@ -48,13 +48,16 @@ function startScreen () {
         wrongAnswer()
     }
     function wrongAnswer() {
-        $(".buffer1").append("<img src='../images/Defeat.jpg'id='defeat'alt='defeat'>");
+        $("#question").hide();
+        $(".buffer1").show();
+        $(".buffer1").append("<img src='assets/images/Defeat.jpg'id='defeat'alt='defeat'>");
+        console.log("WRONG")
     }    
 
 };
 
 function correctScreen () {
-    $(".buffer1").html("<img src=../images/Victory.jpg");
+    $(".buffer1").html("<img src='assets/images/Victory.jpg'id='victory'>");
     $(".buffer1").append("<div class='correct'></div>");
     $(".correct").html("Correct!");
 };
