@@ -22,17 +22,34 @@ var questions = {
         false2: "Telemarketer",
         false3: "Commando",
     },
+    question4 : {
+        title: "What was Alex Hesse's profession in 'Junior'?",
+        answer: "Research Geneticist",
+        false1: "Commando",
+        false2: "Teacher",
+        false3: "Arms Salesman",
+    },
 };
 
 $(".ready").on("click", startScreen)
+$("#timer").hide();
 
 function startScreen () {
+    setTimeout(tenSeconds, 1000 * 10);
     $(".buffer1").append("<div class='title'><h2>");
-    $(".click-ready, .ready").hide();
+    $(".click-ready, .ready, .buffer1").hide();
     $(".title").html(questions.question1.title);
     $(".title").append("<div class='choice1'>");
     $(".choice1").html(questions.question1.false1);
-    $(".chocie1").addType("btn");
+    $(".choice1").addClass("btn");
+    $("#timer").text("10")
+    $("#timer").show();
+    function tenSeconds() {
+        wrongAnswer()
+    }
+    function wrongAnswer() {
+        $(".buffer1").append("<img src='../images/Defeat.jpg'id='defeat'alt='defeat'>");
+    }    
 
 };
 
