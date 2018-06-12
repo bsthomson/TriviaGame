@@ -2,9 +2,27 @@ body, html {
     height: 100%
 }
 .bg {
-    background-image: url("assets/images/Arnold.jpg");
+    background-image: url("../images/Arnold.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+h1 {
+    background-color: #ffffff;
+    opacity: 70%;
+}
+
+h2 {
+    background-color:#ffffff;
+    opacity: 70%;
+}
+
+.buffer1 {
+    height: 400px;
+}
+
+.title {
+    background-color: #ffffff;
 }
