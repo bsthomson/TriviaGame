@@ -30,3 +30,15 @@ h2 {
 #timer {
     background-color: #ffffff;
 }
+
+.correct-answer {
+    background-color: #ffffff;
+}
+
+.timeout {
+    background-color: #ffffff;
+}
+
+.wb {
+    background-color: #ffffff;
+}
